@@ -6,7 +6,12 @@ var Temperature = require('../models/temperature');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-	res.send('respond with a resource');
+		Temperature.find(function(err, values) {
+            if (err)
+                res.send(err);
+
+            res.json(values);
+    });
 })
 
 router.post('/', function(req, res, next) {

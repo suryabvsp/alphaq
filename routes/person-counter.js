@@ -6,7 +6,12 @@ var PersonCounter = require('../models/person-counter');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-	res.send('respond with a resource');
+	PersonCounter.find(function(err, values) {
+            if (err)
+                res.send(err);
+
+            res.json(values);
+    });
 })
 
 router.post('/', function(req, res, next) {
@@ -14,13 +19,6 @@ router.post('/', function(req, res, next) {
 
 	var personCounter = new PersonCounter();
 	personCounter.value = req.body.value;
-	db.collection('all').updateOne(
-      	{ "_id" : "57b7ffe5de9c32aa509ef344" },
-      	{
-        	$set: { "value": 2 }
-    	}, function(err, results) {
-		console.log(results);
-   	});
 
 	personCounter.save(function(err) {
             if (err)
