@@ -1,0 +1,51 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Foundation for Sites</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="css/app.css">
+    </head>
+    <body ng-app="alphaqApp" ng-controller="mainCtrl">
+        <section class="row">
+            <div class="column medium-3 slidebar">
+
+            </div>
+            <div class="column medium-9">
+                <div class="row navbar">
+                    <div class="column medium-3 medium-offset-1">
+                        <input class="search-box" ng-model="o.searchWeekx" type="text" placeholder="Search" />
+                    </div>
+                    <div class="column medium-1 medium-offset-4 text-center">
+                        <img src="media/images/notification.png">
+                    </div>
+                    <div class="column medium-1 text-center">
+                        <img src="media/images/message.png">
+                    </div>
+                    <div class="column medium-1 text-center">
+                        <img src="media/images/setting.png">
+                    </div>
+                    <div class="column medium-1 text-center">
+                        <img src="media/images/oval.png" class="profile">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column small-12">
+                        <div ui-view></div>
+                    </div>
+                </div>                
+            </div>
+        </section>
+
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/what-input/what-input.js"></script>
+        <script src="bower_components/foundation-sites/dist/foundation.js"></script>
+        <script src="bower_components/foundation-sites/dist/foundation.js"></script>
+        <script src="bower_components/angular/angular.min.js"></script>
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/error-ctrl.js"></script>
+    </body>
+</html>
