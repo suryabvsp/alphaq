@@ -14,6 +14,7 @@ mongoose.connect(url); // connect to our database
 var personCounter = require('./routes/person-counter');
 var temperature = require('./routes/temperature');
 var ultraSound = require('./routes/ultra-sound');
+var all = require('./routes/all');
 
 
 // view engine setup
@@ -33,6 +34,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/personcounter', personCounter);
 app.use('/temperature', temperature);
 app.use('/ultrasound', ultraSound);
+app.use('/all', all);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

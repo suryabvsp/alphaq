@@ -1,11 +1,11 @@
 var express = require('express');
 var router = express.Router();
 
-var PersonCounter = require('../models/person-counter');
+var All = require('../models/All');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-	PersonCounter.find(function(err, values) {
+	All.find(function(err, values) {
             if (err)
                 res.send(err);
 
@@ -16,10 +16,10 @@ router.get('/', function(req, res, next) {
 router.post('/', function(req, res, next) {
 	console.log(req.body)
 
-	var personCounter = new PersonCounter();
-	personCounter.value = req.body.value;
+	var all = new All();
+	all.cards = req.body.cards;
 
-	personCounter.save(function(err) {
+	all.save(function(err) {
             if (err)
                 res.send(err);
 

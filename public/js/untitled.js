@@ -1,7 +1,4 @@
-app.controller('errorCtrl', ['$scope','$state','$window','$http', function($scope,$state,$window,$http) {
-    console.log('errorCtrl');
-
-    $scope.cards = [
+{"cards" : [
     	{
     		"name" : "People Count",
     		"value" : "121",
@@ -40,12 +37,4 @@ app.controller('errorCtrl', ['$scope','$state','$window','$http', function($scop
     	},
 
     ]
-
-    // $http.get('/all') // get all results
-    //         .then(function(response){
-    //             debugger
-    //         $scope.cards = angular.copy(response.data.cards);
-    // });
-
-
-}]);
+}
